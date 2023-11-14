@@ -1,19 +1,22 @@
 ![StackUp Banner]([https://tinkerhub.frappe.cloud/files/stackup%20banner.jpeg])
 # Project Name
-Long Description about project. This project do that. This project is awesome...
+Blog-App
+This app is made with HTML, CSS, Express.
 ## Team members
-1. Name [Embed personal github URL]
-2. Name [Embed perosnal github URL]
+1. Akash M Nandan [https://github.com/akashmn]
+2. K S Abhishek [https://github.com/OPTRONIX-10]
+3. Ashish Prasannan [https://github.com/matrixx404]
 ## Team Id
-Team id here
+usestate
 ## Link to product walkthrough
 [link to video]
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Library Name - Version
+Express, Loadash, Nodemon
 ## How to configure
-Instructions for setting up project
+1. Clone the App 
+2. use the command 'npm install' in your terminal
 ## How to Run
-Instructions for running
+nodemon app
