@@ -1,0 +1,47 @@
+const express = require('express');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const blogRoutes = require('./routes/blogsRutes')
+
+//express app
+const app = express();
+
+//connect to db
+
+const dbUri = 'mongodb+srv://ksabhishek00:ronaldomessi@cluster0.vjdwpsa.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(dbUri)
+.then((result)=>app.listen(3000))
+.catch((err)=>console.log(err));
+
+//register view engine
+app.set('view engine','ejs');
+
+//middleware and static files
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended:true}))
+app.use(express.static('public'));
+
+app.get('/',(req,res)=>{
+    // res.send('<p>HELLO</p>');
+
+    // const blogs = [
+    //     {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    // {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    // {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    // ]
+    // res.render('index',{title:'Home',blogs});
+    res.redirect('/blogs');
+});
+
+app.get('/about',(req,res)=>{
+    // res.send('<p>HELLO About</p>');
+    res.render('about',{title:'About'});
+});
+
+//blog routes
+
+app.use('/blogs',blogRoutes);
+
+app.use((req,res)=>{
+    res.status(404).render('404',{title:'404'})
+})
