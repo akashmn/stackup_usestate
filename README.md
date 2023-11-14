@@ -14,7 +14,7 @@ usestate
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Express, Loadash, Nodemon
+Express, Loadash, Nodemon & Mongoose
 ## How to configure
 1. Clone the App 
 2. use the command 'npm install' in your terminal
