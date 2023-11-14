@@ -22,19 +22,12 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
-    // res.send('<p>HELLO</p>');
-
-    // const blogs = [
-    //     {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-    // {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-    // {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-    // ]
-    // res.render('index',{title:'Home',blogs});
+    
     res.redirect('/blogs');
 });
 
 app.get('/about',(req,res)=>{
-    // res.send('<p>HELLO About</p>');
+    
     res.render('about',{title:'About'});
 });
 
